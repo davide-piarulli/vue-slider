@@ -14,3 +14,4 @@ Partendo dal markup della versione svolta in js plain, rifare lo slider ma quest
 ## STEP DA SEGUIRE
 1. genero prima le immagini grandi, prendendo l'array images con un counter e le visualizzo
 2. utilizzo un v-for per generare le thumbnails
+3. 
