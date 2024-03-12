@@ -12,4 +12,5 @@ Partendo dal markup della versione svolta in js plain, rifare lo slider ma quest
 - il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l’esercizio si riduce a poche righe ;
 
 ## STEP DA SEGUIRE
-1. 
+1. genero prima le immagini grandi, prendendo l'array images con un counter e le visualizzo
+2. utilizzo un v-for per generare le thumbnails

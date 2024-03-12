@@ -49,18 +49,18 @@
 
                         <div class="my-thumbnails position-relative">
                             <!-- prev -->
-                            <div class="my-previous position-absolute">
-                                <span class="my-prev-hook"></span>
+                            <div class="my-previous position-absolute" @click="nextPrev(false)">
+                                <span class="my-prev-hook" ></span>
                             </div>
 
-                            <div v-for="(image, indice) in images" :class="{'active' : indice === counter}" class="my-thumbnail ">
+                            <div v-for="(image, indice) in images" :class="{'active' : indice === counter}" class="my-thumbnail" @click="counter = indice">
                                 <img class="img-fluid" :src="image.url" :alt="image.title">
                             </div>
 
 
                             <!-- next -->
-                            <div class="my-next position-absolute">
-                                <span class="my-next-hook"></span>
+                            <div class="my-next position-absolute" @click="nextPrev(true)">
+                                <span class="my-next-hook" ></span>
                             </div>
                         </div>
                     </div>
