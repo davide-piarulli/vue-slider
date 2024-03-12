@@ -32,7 +32,8 @@ createApp({
                     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
                 }
             ],
-            counter: 0
+            counter: 0,
+            isAutoplay: true
         }
     },
     methods: {
@@ -45,10 +46,12 @@ createApp({
           this.counter = this.images.length - 1;
         }
       },
-      autoPlay(){
-        setInterval( () => this.nextPrev(true), 3000);
-      }
-
+      autoPlay(){ setInterval( () => {
+            if (this.isAutoplay) {
+                this.nextPrev(true)
+            }
+         }, 1000)
+        }   
     },
     mounted(){
         this.autoPlay()
