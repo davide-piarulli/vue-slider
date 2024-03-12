@@ -33,7 +33,9 @@ createApp({
                 }
             ],
             counter: 0,
-            isAutoplay: true
+            isAutoplay: true,
+            isNext : true,
+            forward: true
         }
     },
     methods: {
@@ -47,9 +49,7 @@ createApp({
         }
       },
       autoPlay(){ setInterval( () => {
-            if (this.isAutoplay) {
-                this.nextPrev(true)
-            }
+            this.isAutoplay ? this.nextPrev(this.forward) : ''
          }, 1000)
         }   
     },
